@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+            <!--site dos ícones: https://icons.getbootstrap.com/-->
+
+            <!--importar as fontes usadas-->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+            <!--icone que aparece na página no navegador-->
+            <link rel="stylesheet" href="style_Reutilizar.css">
+
+            <link rel="shortcut icon" href="favicon.ico" />
+
+            <!--título da página no navegador-->
+            <title>Alternativas</title>
+
+      </head>
+
+      <body>
+          <div id="cabecalho">
+            <!--título e logo-->
+            <img id="alternativas" src="titulo.svg">
+            <img id="terra_mar" src="terramar.png">
+
+          </div>
+
+          <div id="Reutilizar1">
+
+            <h1>Reutilizando...</h1>
+
+            <h2>Opções:</h2>
+
+            <!--efeito imagem-->
+            <div class="imagem-subindo js-scroll deslizar-base">
+                <img id="guardaCanetas" src="guardaCanetas.png">
+
+                <!--dizer para o javascript para o texto subir quando a gaia aparecer na tela-->
+                <script>
+                      const scrollElements = document.querySelectorAll(".imagem-subindo");
+
+                      const elementInView = (el, dividend = 1) => {
+                        const elementTop = el.getBoundingClientRect().top;
+
+                        return (
+                          elementTop <=
+                          (window.innerHeight || document.documentElement.clientHeight) / dividend
+                        );
+                      };
+
+                      const elementOutofView = (el) => {
+                        const elementTop = el.getBoundingClientRect().top;
+
+                        return (
+                          elementTop > (window.innerHeight || document.documentElement.clientHeight)
+                        );
+                      };
+
+                      const displayScrollElement = (element) => {
+                        element.classList.add("scrolled");
+                      };
+
+                      const hideScrollElement = (element) => {
+                        element.classList.remove("scrolled");
+                      };
+
+                      const handleScrollAnimation = () => {
+                        scrollElements.forEach((el) => {
+                          if (elementInView(el, 1.25)) {
+                            displayScrollElement(el);
+                          } else if (elementOutofView(el)) {
+                            hideScrollElement(el)
+                          }
+                        })
+                      }
+
+                      window.addEventListener("scroll", () => {
+                        handleScrollAnimation();
+                      });
+               </script>
+            </div>
+
+            <p>• Enfeite para parede de informática; <br>• Guarda canetas.</br></p>
+
+            <h2> Guarda canetas com caixa de perfume:</h2>
+            <h2>Itens</h2>
+
+            <p><br>• Caixa de perfume;</br><br>•Tesoura;</br><br>• Cola;</br><br>• Folha usada;</br><br>• Enfeites opcionais.</br></p>
+
+            <h2>Preparo:</h2>
+
+              <p><br>1. Pegue as caixas vazias de leite e corte-as;</br><br>2. Cole as folhas usadas na sua caixinha e deixe secar;</br><br>3. Enfeite da maneira que preferir;</br></p>
+
+              <h2>Quadro de Informática:</h2>
+              <img id="QuadroTI" src="QuadroTI.png">
+
+             <h2>Preparo:</h3>
+             <p><em class="word-break">
+              Para preparar o quadro é necessário apenas um teclado que
+              seria descartado, mas com a reutilização poderá virar um quadro legal, inclusive
+              excluir a compra de outro item que não é necessário. </em></p>
+
+              <h2> Guarda Canetas caixa de leite:</h2>
+
+                <img id="GuardaCanetas1" src="guardaCanetasCaixadeLeite.png">
+
+              <h2>Itens:</h2>
+              <p><br>• Caixa de leite ;</br><br>• Tesoura;</br><br>• Cola;</br><br>• Postite usado;</br><br>• Enfeites opcionais.</br></p>
+              <h2>Preparo:</h2>
+              <p><br>1. Pegue as caixas vazias de leite e lave-as;</br><br>2. Corte as caixas do tamanho que você quer fique seu guarda canetas;</br><br>3. Cole os postites usados na sua caixinha e deixe secar;</br><br>4. Enfeite da maneira que preferir;</br></p>
+
+</em></p>
+
+
+
+</html>
