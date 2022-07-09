@@ -2,7 +2,6 @@
 <html>
 
       <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
             <!--site dos ícones: https://icons.getbootstrap.com/-->
 
             <!--importar as fontes usadas-->
@@ -14,73 +13,17 @@
             <link rel="shortcut icon" href="favicon.ico" />
 
             <!--título da página no navegador-->
-            <title>DICIOJOVEM</title>
+            <title>Alternativas</title>
 
       </head>
 
       <body>
 
-        <!--abas de itens sustentáveis-->
-        <nav>
-              <div class="dropdown">
-                  <button><img id="menu" src="water.svg">
-
-              </button>
-
-                <div class="dropdown-content">
-
-                <ul id ="ul-principal">
-
-                <li class="li-p">
-                  <div class="dropdown1">
-                    <button class="dropbtn">
-                      <a href="informatica.html">INFORMÁTICA</a>
-                   </button>
-
-                   <div class="dropdown-content1">
-                   <ul class="ul-beleza">
-                            <li><a href="esfoliante.html">Esfoliante</a></li>
-                            <li><a href="desodorante.html">Desodorante</li>
-                            <li><a href="Ecopad.html">Ecopad</li>
-                            <li><a href="Xampu.html">Xampu Sólido</li>
-                  </ul>
-                </div>
-                </div>
-                </li>
-
-                 <li class="li-p">
-                   <div class="dropdown1">
-                   <button class="dropbtn"><a href="mencoesdesites.html">MENÇÕES DE SITES</a></button>
-                      <div class="dropdown-content1">
-                      <ul class="ul-mencoesdesites">
-                            <li><a href="Reutilizar.html">Reutilizar</li>
-                            <li><a href="PraticasNoDia.html">Práticas Diárias</li>
-                            <li><a href="Reduzir.html">Reduzir</li>
-                      </ul>
-                      </div>
-                      </div>
-                  </li>
-
-
-                 <li class="li-p">
-                    <div class="dropdown1">
-                   <button class="dropbtn"<a href="voceprecisaconhecer.html">VOCÊ PRECISA CONHECER</a></button>
-                      <div class="dropdown-content1">
-                      <ul class="ul-voceprecisaconhecer">
-                            <li><a href="SistemaAquaponico.html">Sistema Aquaponico</li>
-                            <li><a href=""></a></li>
-                      </ul>
-                        </div>
-                          </div>
-                  </li>
-                </div>
-
-              </div>
-          </nav>
-
-
           <!--1º bloco-->
-          <div id="cabecalho">
+          <div class="main" id="cabecalho">
+
+                <!--fundo mar e terra-->
+                <img id="terra_mar" src="terramar.svg">
 
                 <!--título e logo-->
                 <img id="alternativas" src="titulo.svg">
@@ -88,10 +31,11 @@
                 <!--barra de pesquisa-->
                 <div class="barra_de_pesquisa">
                         <!--código que adiciona barra de pesquisa-->
-                        <form action="/action_page.php" method="get" role="search" id="form" type="search">
-
+                        <form role="search" id="form">
                            <input type="search" id="query" name="q"
                                 placeholder="pesquisar..."
+                                aria-label="Search through site content">
+
                                 <button id="btn_lupa">
                                     <svg id="icone_lupa" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -100,11 +44,23 @@
                         </form>
 
 
+                        <!--javascript que faz a barra de pesquisa funcionar-->
+                        <script>
+                          const f = document.getElementById('form');
+                          const q = document.getElementById('query');
+                          const google = 'https://www.google.com/';
+                          const site = 'nomedosite.com';
 
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + '+' + q.value;
+                            const win = window.open(url, '_blank');
+                            win.focus();
+                          }
+
+                          f.addEventListener('submit', submitted);
+                        </script>
                 </div>
-
-                <!--fundo mar e terra-->
-                <img id="terra_mar" src="terramar.svg">
 
                 <!--botão para o próximo bloco-->
                 <a href="#conteudo_1"><svg id="icone_seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
@@ -115,121 +71,96 @@
           </div>
 
           <!--2º bloco-->
-          <div id="bloco_2">
-
-                <img id="sist_insustentavel" src="sist_insustentavel.svg" >
+          <div class="main" id="bloco_2">
 
                 <div class="main" id="conteudo_1">
 
-                  <h1><br>&nbsp;&nbsp;</br>TÍTULO TEXTO</h1>
-                  <p>
-                    TEXTOO
-                  </p>
-                  <h1><b>&nbsp;&nbsp;"</h1>
-                        <div class= "citacao">
-                              <h2><i>TEXTOOO</h2>
-                        </div>
+                  <h1>TÍTULO 1</h1>
+                  <p><em class="word-break">
+                    Lady gagagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaggaabhadjkanlmcslçkjbkhcsj riahannnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  </em></p>
 
                 </div>
 
-
-
-                <img id="sist_sustentavel" src="sist_sustentavel.svg" >
+                      <img id="sist_ruim" src="sist.ruim.png" >
 
                 <div class="main" id="conteudo_2">
 
-                    <h1>SUSTENTÁVEL</h1>
-                    <p></p>
+                    <h2>T&Iacute;TULO 2</h2>
+                    <p><em class="word-break">
+                      Lady gagagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaggaabhadjkanlmcslçkjbkhcsj riahannnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    </em></p>
 
                   </div>
 
-
-
-          <div id="bloco_3">
-
-                          <div class="main" id="hipotese_de_gaia">
-
-                              <h1>TORNANDO O CRESCIMENTO DAS CRIANÇAS E ADOLESCENTES MELHORES!</h1>
-                              <p>
-
-                              </p>
-
-                          </div>
-
-                          <img id="gaia" src="logo_gaia_colorido.svg" >
-
-                          <!--texto subindo-->
-                          <div id="container">
-                            <div class="texto-subindo js-scroll deslizar-base">
-                              <p>
-                                O site disponibiliza a todos as crianças e jovens uma melhor infância!</i>”,
-                                Proporciona um maior conhecimento!<b>Ajuda em áreas do conhecimento</b>, dicas para o dia a dia
-                                e oportunidades de qualificação,<br><br>O site <b>ajuda na área da saúde</b>
-                              </p>
-
-                              <!--dizer para o javascript para o texto subir quando a gaia aparecer na tela-->
-                              <script>
-                                    const scrollElements = document.querySelectorAll(".texto-subindo");
-
-                                    const elementInView = (el, dividend = 1) => {
-                                      const elementTop = el.getBoundingClientRect().top;
-
-                                      return (
-                                        elementTop <=
-                                        (window.innerHeight || document.documentElement.clientHeight) / dividend
-                                      );
-                                    };
-
-                                    const elementOutofView = (el) => {
-                                      const elementTop = el.getBoundingClientRect().top;
-
-                                      return (
-                                        elementTop > (window.innerHeight || document.documentElement.clientHeight)
-                                      );
-                                    };
-
-                                    const displayScrollElement = (element) => {
-                                      element.classList.add("scrolled");
-                                    };
-
-                                    const hideScrollElement = (element) => {
-                                      element.classList.remove("scrolled");
-                                    };
-
-                                    const handleScrollAnimation = () => {
-                                      scrollElements.forEach((el) => {
-                                        if (elementInView(el, 1.25)) {
-                                          displayScrollElement(el);
-                                        } else if (elementOutofView(el)) {
-                                          hideScrollElement(el)
-                                        }
-                                      })
-                                    }
-
-                                    window.addEventListener("scroll", () => {
-                                      handleScrollAnimation();
-                                    });
-                              </script>
-                          </div>
-                          </div>
-
-                  </div>
-                  <div id="rodape">
-
-                    <h1>DICIOJOVEM</h1>
-
-                    <div id="links">
-                        <a href="index.html" id="home">Página Inicial</a><a href="index.html" id="home">Sobre</a>
-                    </div>
-
-
-                  </div>
-                  <div id="grupo">
-                      <h3>Em prol da Casa Aberta de São Leopoldo.</h3>
-
+                      <img id="sist_bom" src="sist.bom.png" >
 
           </div>
 
+          <!--3º bloco-->
+          <div class="main" id="bloco_3">
+
+                  <div class="main" id="hipotese_de_gaia">
+
+                      <h2>HIPÓTESE DE GAIA<h2>
+
+                  </div>
+
+                  <img id="gaia" src="logo_gaia_colorido.svg" >
+
+                  <!--texto subindo-->
+                  <div class="texto-subindo js-scroll deslizar-base">
+                      <p><em class="word-break">
+                        Lady gagagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaggaabhadjkanlmcslçkjbkhcsj riahannnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                      </em></p>
+
+                      <!--dizer para o javascript para o texto subir quando a gaia aparecer na tela-->
+                      <script>
+                            const scrollElements = document.querySelectorAll(".texto-subindo");
+
+                            const elementInView = (el, dividend = 1) => {
+                              const elementTop = el.getBoundingClientRect().top;
+
+                              return (
+                                elementTop <=
+                                (window.innerHeight || document.documentElement.clientHeight) / dividend
+                              );
+                            };
+
+                            const elementOutofView = (el) => {
+                              const elementTop = el.getBoundingClientRect().top;
+
+                              return (
+                                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+                              );
+                            };
+
+                            const displayScrollElement = (element) => {
+                              element.classList.add("scrolled");
+                            };
+
+                            const hideScrollElement = (element) => {
+                              element.classList.remove("scrolled");
+                            };
+
+                            const handleScrollAnimation = () => {
+                              scrollElements.forEach((el) => {
+                                if (elementInView(el, 1.25)) {
+                                  displayScrollElement(el);
+                                } else if (elementOutofView(el)) {
+                                  hideScrollElement(el)
+                                }
+                              })
+                            }
+
+                            window.addEventListener("scroll", () => {
+                              handleScrollAnimation();
+                            });
+                      </script>
+
+            </div>
+
+          </div>
 
       </body>
 
