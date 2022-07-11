@@ -278,13 +278,13 @@ button {
 
 img#alternativas {
       position: absolute;
-      width: 92vw;
-      height: 37%;
+      width: 85vw;
+      height: 50%;
       left: 0%;
       right: 0%;
       margin: auto;
-      top: 20%;
-      max-width: 100%;
+      top: 10%;
+      max-width: 95%;
 }
 
 img#terra_mar {
